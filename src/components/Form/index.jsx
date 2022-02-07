@@ -1,3 +1,4 @@
+import  "./style.css"
 import { useState } from 'react'
 
 const Form = ({listTransactions, setListTransactions, storeTransactions}) =>{
@@ -6,7 +7,7 @@ const Form = ({listTransactions, setListTransactions, storeTransactions}) =>{
     return(
         <div className="container-form">
             <form>
-                <label>
+                <label className="description">
                     Descrição
                 <input 
                 placeholder="Digite aqui sua descrição"
@@ -16,7 +17,7 @@ const Form = ({listTransactions, setListTransactions, storeTransactions}) =>{
                 <p>Ex:Compra de roupas</p>
                 </label>
 
-                <label>
+                <label className="value">
                     Valor
                     <input
                     placeholder = "1         R$"
@@ -26,7 +27,7 @@ const Form = ({listTransactions, setListTransactions, storeTransactions}) =>{
                     />
                 </label>
 
-                <label>
+                <label className="value-type">
                     Tipo de valor
                     <select 
                     onChange={((event) => setUserInput({...userInput,"type":event.target.value}))}

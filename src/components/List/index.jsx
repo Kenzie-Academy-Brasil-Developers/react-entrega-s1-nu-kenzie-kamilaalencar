@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const List = ({listTransactions}) =>{
+const List = ({listTransactions, setListTransactions}) =>{
 
     
 }
