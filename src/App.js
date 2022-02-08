@@ -2,8 +2,8 @@ import './App.css';
 import {useState} from 'react';
 import Form from './components/Form';
 import List from './components/List';
-import Card from './components/Card';
-import TotalMoney from './components/TotalMoney'
+import TotalMoney from './components/TotalMoney';
+import Header from './components/Header';
 
 function App() {
   
