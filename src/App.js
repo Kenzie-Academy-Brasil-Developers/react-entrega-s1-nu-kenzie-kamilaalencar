@@ -1,37 +1,41 @@
-import './App.css';
-import {useState} from 'react';
-import Form from './components/Form';
-import List from './components/List';
-import TotalMoney from './components/TotalMoney';
-import Header from './components/Header';
+import "./App.css";
+import logo from "./Nu Kenzie.svg";
+import { useState } from "react";
+import Form from "./components/Form";
+import List from "./components/List";
+import TotalMoney from "./components/TotalMoney";
+import Filtros from "./components/Filtros";
 
 function App() {
-  
   const [listTransactions, setListTransactions] = useState([
     { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 }
-  ])
+    { description: "Conta de luz", type: "saída", value: -150 },
+  ]);
 
   const storeTransactions = (newTransactions) => {
-    setListTransactions([...listTransactions, newTransactions])
-    console.log(listTransactions)
-  }
-
+    // typeof newTransactions.value != "number"
+    //   ? (newTransactions.value = parseInt(newTransactions.value))
+    //   : (newTransactions.value = newTransactions.value);
+    setListTransactions([...listTransactions, newTransactions]);
+  };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Form storeTransactions = {storeTransactions}/>
-
-      
-
-
+      <header>
+        <img src={logo} className="App-logo" alt="logo" />
+        <button>Inicio</button>
       </header>
-    </div>
-    
+      <main>
+        <Form storeTransactions={storeTransactions} />
 
-     
-      
+        <TotalMoney listTransactions={listTransactions} />
+
+        <div>
+          <Filtros />
+          <List listTransactions={listTransactions} />
+        </div>
+      </main>
+    </div>
   );
 }
 
