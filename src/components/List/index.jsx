@@ -9,7 +9,7 @@ const List = ({ listTransactions }) => {
         <div className="buttons">
           <button className="todos">Todos</button>
           <button className="entradas">Entradas</button>
-          <button className="saidas">Saídas</button>
+          <button className="saidas">Despesas</button>
         </div>
       </div>
       <div className="container-list">

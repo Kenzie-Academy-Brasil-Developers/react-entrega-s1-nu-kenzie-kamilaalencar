@@ -4,7 +4,7 @@ import { useState } from "react";
 const Form = ({ storeTransactions }) => {
   const [userInput, setUserInput] = useState({
     description: "",
-    type: "entrada",
+    type: "Entrada",
     value: "",
   });
 
@@ -16,7 +16,7 @@ const Form = ({ storeTransactions }) => {
           <input
             placeholder="Digite aqui sua descrição"
             onChange={(event) =>
-              setUserInput({ ...userInput, description: event.target.value })
+              setUserInput({ ...userInput, "description": event.target.value })
             }
             type="text"
             value={userInput.description}
@@ -30,7 +30,7 @@ const Form = ({ storeTransactions }) => {
             <input
               placeholder="1         R$"
               onChange={(event) =>
-                setUserInput({ ...userInput, value: event.target.value })
+                setUserInput({ ...userInput, "value": event.target.value })
               }
               type="number"
               value={userInput.value}
@@ -41,14 +41,14 @@ const Form = ({ storeTransactions }) => {
             <label>Tipo de valor</label>
             <select
               onChange={(event) =>
-                setUserInput({ ...userInput, type: event.target.value })
+                setUserInput({ ...userInput, "type": event.target.value })
               }
               value={userInput.type}
             >
               <option value="Entrada" defaultValue>
                 Entrada
               </option>
-              <option value="Saída">Saída</option>
+              <option value="Despesas">Despesas</option>
             </select>
           </div>
         </div>

@@ -10,10 +10,7 @@ const Card = ({ transaction }) => {
       </div>
       <div className="container-2">
         <p>
-          <span>
-            R${" "}
-            {transaction.value < 0 ? transaction.value * -1 : transaction.value}
-          </span>
+          <span>R$ {transaction.value}</span>
         </p>
         <button>
           <FaTrash />
