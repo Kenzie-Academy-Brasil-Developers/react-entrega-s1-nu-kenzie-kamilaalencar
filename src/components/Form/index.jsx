@@ -10,9 +10,9 @@ const Form = ({ storeTransactions }) => {
 
   return (
     <div className="container-form">
-      <form>
-        <label className="description">
-          Descrição
+      <form onSubmit={(event) => event.preventDefault()}>
+        <div className="description">
+          <label>Descrição</label>
           <input
             placeholder="Digite aqui sua descrição"
             onChange={(event) =>
@@ -22,34 +22,37 @@ const Form = ({ storeTransactions }) => {
             value={userInput.description}
           />
           <p>Ex:Compra de roupas</p>
-        </label>
+        </div>
 
-        <label className="value">
-          Valor
-          <input
-            placeholder="1         R$"
-            onChange={(event) =>
-              setUserInput({ ...userInput, value: event.target.value })
-            }
-            type="number"
-            value={userInput.value}
-          />
-        </label>
+        <div className="container-value">
+          <div className="value">
+            <label>Valor</label>
+            <input
+              placeholder="1         R$"
+              onChange={(event) =>
+                setUserInput({ ...userInput, value: event.target.value })
+              }
+              type="number"
+              value={userInput.value}
+            />
+          </div>
 
-        <label className="value-type">
-          Tipo de valor
-          <select
-            onChange={(event) =>
-              setUserInput({ ...userInput, type: event.target.value })
-            }
-            value={userInput.type}
-          >
-            <option value="Entrada" defaultValue>
-              Entrada
-            </option>
-            <option value="Saída">Saída</option>
-          </select>
-        </label>
+          <div className="value-type">
+            <label>Tipo de valor</label>
+            <select
+              onChange={(event) =>
+                setUserInput({ ...userInput, type: event.target.value })
+              }
+              value={userInput.type}
+            >
+              <option value="Entrada" defaultValue>
+                Entrada
+              </option>
+              <option value="Saída">Saída</option>
+            </select>
+          </div>
+        </div>
+
         <button onClick={() => storeTransactions(userInput)}>
           Inserir valor
         </button>

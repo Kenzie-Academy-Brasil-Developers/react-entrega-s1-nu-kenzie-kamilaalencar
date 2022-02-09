@@ -1,0 +1,23 @@
+.container-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  height: 96px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.container-total p {
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+
+.container-total span p {
+  color: #fd377e;
+}

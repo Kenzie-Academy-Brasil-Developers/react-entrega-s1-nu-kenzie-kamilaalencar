@@ -1,10 +1,9 @@
+import { useState } from "react";
 import "./App.css";
 import logo from "./Nu Kenzie.svg";
-import { useState } from "react";
 import Form from "./components/Form";
 import List from "./components/List";
 import TotalMoney from "./components/TotalMoney";
-import Filtros from "./components/Filtros";
 
 function App() {
   const [listTransactions, setListTransactions] = useState([
@@ -13,9 +12,9 @@ function App() {
   ]);
 
   const storeTransactions = (newTransactions) => {
-    // typeof newTransactions.value != "number"
-    //   ? (newTransactions.value = parseInt(newTransactions.value))
-    //   : (newTransactions.value = newTransactions.value);
+    typeof newTransactions.value != "number"
+      ? (newTransactions.value = parseInt(newTransactions.value))
+      : (newTransactions.value = newTransactions.value);
     setListTransactions([...listTransactions, newTransactions]);
   };
 
@@ -27,11 +26,8 @@ function App() {
       </header>
       <main>
         <Form storeTransactions={storeTransactions} />
-
         <TotalMoney listTransactions={listTransactions} />
-
         <div>
-          <Filtros />
           <List listTransactions={listTransactions} />
         </div>
       </main>
