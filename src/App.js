@@ -25,8 +25,10 @@ function App() {
         <button>Inicio</button>
       </header>
       <main>
-        <Form storeTransactions={storeTransactions} />
-        <TotalMoney listTransactions={listTransactions} />
+        <div>
+          <Form storeTransactions={storeTransactions} />
+          <TotalMoney listTransactions={listTransactions} />
+        </div>
         <div>
           <List listTransactions={listTransactions} />
         </div>

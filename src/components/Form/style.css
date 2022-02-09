@@ -93,3 +93,25 @@ form button {
   color: #ffffff;
   font-family: Inter;
 }
+
+@media screen and (min-width: 400px) {
+  .container-form {
+    width: 363px;
+  }
+  .description input {
+    width: 314px;
+    margin-top: 12.1px;
+  }
+  .value input {
+    width: 128px;
+    margin-top: 9px;
+  }
+  .value-type select {
+    width: 150px;
+    margin-top: 9px;
+  }
+  form button {
+    width: 314px;
+    margin-top: 19px;
+  }
+}

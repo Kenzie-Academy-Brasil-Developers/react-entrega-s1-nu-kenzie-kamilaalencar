@@ -15,9 +15,14 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 30px;
-  color: #212529;
 }
 
-.container-total span p {
+.container-total span {
   color: #fd377e;
+}
+
+@media screen and (min-width: 400px) {
+  .container-total {
+    width: 363px;
+  }
 }

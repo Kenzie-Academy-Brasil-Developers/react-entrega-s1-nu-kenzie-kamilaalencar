@@ -57,3 +57,17 @@
   box-sizing: border-box;
   border-radius: 8px;
 }
+@media screen and (min-width: 560px) {
+  .container-filtros {
+    flex-direction: row;
+    width: 560px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .todos {
+    margin-right: 16px;
+  }
+  .entradas {
+    margin-right: 16px;
+  }
+}

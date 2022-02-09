@@ -5,7 +5,7 @@ const Form = ({ storeTransactions }) => {
   const [userInput, setUserInput] = useState({
     description: "",
     type: "entrada",
-    value: 0,
+    value: "",
   });
 
   return (
@@ -21,7 +21,7 @@ const Form = ({ storeTransactions }) => {
             type="text"
             value={userInput.description}
           />
-          <p>Ex:Compra de roupas</p>
+          <p>Ex: Compra de roupas</p>
         </div>
 
         <div className="container-value">
